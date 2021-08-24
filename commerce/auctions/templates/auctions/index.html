@@ -1,0 +1,66 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block seguimiento %}
+
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'seguimiento' 0 user.id  %}">Whatchlist</a>
+</li>
+
+{% endblock%}
+
+{% block body %}
+
+{% if confirmacion %}
+
+<div class="confirmacion">
+
+    <p class="tituloConfirmacion">{{confirmacion}}</p>
+
+</div>
+
+<br>
+
+{% endif %}
+
+
+{{confirmacion}}
+
+
+
+{% if error %}
+
+<div class="error">
+
+    <p class="tituloError">{{error}}</p>
+
+</div>
+
+<br>
+
+{% endif %}
+
+
+
+
+<h2 class="titulo" >Active Listings</h2>
+
+<ul>
+    {% for sub in subastas %}
+
+    <img src="{{sub.imagen.url}}" alt="{{sub.imagen}}">
+    
+    <li class="subasta"><a class="tituloSubasta" href="{% url 'subasta' sub.id %}">{{sub.titulo}} By {{sub.usuario}}</a>
+        <h6 class="titulo">Description: {{sub.descripcion}}</h6>
+        <h6 class="titulo">Current bid: $ {{sub.precioInicial}} </h6>
+
+        
+
+    </li>
+    <br>
+
+    {% endfor %}
+</ul>
+
+
+{% endblock %}

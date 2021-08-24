@@ -1,0 +1,40 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block seguimiento %}
+
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'seguimiento' 0 user.id  %}">Whatchlist: {{cont}}</a>
+</li>
+
+{% endblock%}
+
+{% block body %}
+
+<h3 class="titulo" >Hi, {{user}}!</h3>
+<h4 class="titulo">This is your Watchlist:</h4>
+
+<br>
+
+
+<ul>
+    {% for seg in seguimientos %}
+
+    <li class="confirmacionSeg">
+        <h6 class="tituloConfirmacionSeg"> <a class="tituloConfirmacionSeg" href="{% url 'subasta' seg.subasta.id %}">{{seg}}</a>   </h6>
+        <form action="{% url 'remover' seg.subasta.id user.id %}", method="POST">
+            {% csrf_token %}
+            <input class = "botonError" type="submit" value="Remove">
+        </form>
+        
+     </li>
+    <br>
+
+    {% endfor %}
+</ul>
+
+
+
+
+
+{% endblock %}

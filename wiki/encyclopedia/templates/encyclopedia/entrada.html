@@ -1,0 +1,42 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+
+{% block title %}
+
+{{search}}
+    
+{% endblock %}
+
+{% block body %}
+    
+
+
+    <ul>
+        <h2>{{search}}</h2>
+
+      
+
+        {% if page == None %}
+
+        <h1>¡Ups! No tenemos información de esta página</h1>
+
+        {% else %}
+      
+         <div>
+
+            <h1>{{page|safe}}</h1>
+            <a href="/wiki/EditPage/{{search}}">Editar</a>
+
+
+         </div>
+        
+
+
+        {% endif %}
+
+        
+     
+    </ul>
+
+{% endblock %}

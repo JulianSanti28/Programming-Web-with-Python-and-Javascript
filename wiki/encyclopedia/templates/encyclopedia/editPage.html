@@ -1,0 +1,56 @@
+{% extends "encyclopedia/layout.html" %}
+
+
+
+{% block title %}
+
+Search
+
+{% endblock %}
+
+{% block body %}
+
+
+
+<h2>Editing {{title}}</h2>
+
+  
+
+
+    <form action="{% url 'editPage' ' ' %}" method="POST">
+
+    {% csrf_token%}
+    <p>Título:</p>
+    <input type="text" name="titulo" value = "{{title}}" readonly=»readonly»>
+    <p>Contenido:</p>
+
+    <textarea name="contenido" id="" cols="30" rows="10">{{content}}</textarea>
+    
+
+    {{form}}
+
+   
+
+
+
+        
+
+  
+
+
+    
+     
+ 
+    
+    <p>¡Guarda la Información!:</p>
+    <input type="submit" value="¡Guardar!">
+
+    </form>
+    
+
+    
+
+
+
+
+{% endblock %}

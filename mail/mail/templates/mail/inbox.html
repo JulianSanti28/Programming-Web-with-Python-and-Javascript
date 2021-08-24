@@ -1,0 +1,84 @@
+{% extends "mail/layout.html" %}
+{% load static %}
+
+{% block body %}
+<h3 class="tituloI">Hi, </h3>
+<h3 id="userA" class="tituloI">{{ request.user.email }}</h3>
+
+<button class="btn btn-sm btn-outline-primary" id="inbox">Inbox</button>
+<button class="btn btn-sm btn-outline-primary" id="compose">Compose</button>
+<button class="btn btn-sm btn-outline-primary" id="sent">Sent</button>
+<button class="btn btn-sm btn-outline-primary" id="archived">Archived</button>
+
+<a class="btn btn-sm btn-outline-primary" href="{% url 'logout' %}">Log Out</a>
+<hr>
+
+<div id="emails-view" class="tituloI">
+
+</div>
+
+<div class="confirmacion" id="response">
+
+    <h3 class="tituloConfirmacion" id="result">
+
+    </h3>
+
+</div>
+
+
+<div class="error" id="responseE">
+
+    <h3 class="tituloConfirmacion" id="resultE">
+
+    </h3>
+
+</div>
+
+<ul id="emls">
+
+</ul>
+
+
+
+<div id="compose-view">
+    
+    <div id = "archivedInb">
+
+    </div>
+    <h3 id="newE" class="tituloI">New Email</h3>
+    
+    <form id="compose-form">
+        {% csrf_token %}
+
+
+
+        <div class="tituloI">
+            From: <input id="compose-sender" disabled class="form-control" value="{{ request.user.email }}">
+            <div id="inb">
+
+            </div>
+        </div>
+
+        <div class="tituloI">
+            To: <input id="compose-recipients" class="form-control" required>
+        </div>
+        <br>
+        <div class="tituloI">
+            <input class="form-control" id="compose-subject" placeholder="Subject">
+        </div>
+        <br>
+        <textarea class="form-control" id="compose-body" placeholder="Body" required></textarea>
+        <br>
+        <input id="btnTest" type="submit" class="btn btn-primary" />
+
+    </form>
+
+
+
+
+</div>
+{% endblock %}
+
+{% block script %}
+<script src="{% static 'mail/inbox.js' %}"></script>
+{% endblock %}

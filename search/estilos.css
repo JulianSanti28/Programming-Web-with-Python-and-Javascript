@@ -1,0 +1,130 @@
+.busqueda {
+    border-radius: 20px;
+    width: 61%;
+    height: 36px;
+    display: block;
+    margin-top: 20px;
+    border-color: rgb(224, 224, 224);
+    outline: none;
+}
+
+.btnBusquedaGoogle {
+    margin-top: 36px;
+    margin-left: 117px;
+    width: 153px;
+    height: 34px;
+    background: rgb(240, 240, 240);
+    border: 1px solid;
+    border-color: rgb(231, 231, 231);
+    color: rgb(53, 53, 53);
+}
+
+.btnBusquedaGoogleImg {
+    margin-top: 36px;
+    margin-left: 180px;
+    width: 153px;
+    height: 34px;
+    background: rgb(240, 240, 240);
+    border: 1px solid;
+    border-color: rgb(231, 231, 231);
+    color: rgb(53, 53, 53);
+}
+
+.btnTengoSuerte {
+    margin-top: 20px;
+    margin-left: 15px;
+    width: 153px;
+    height: 34px;
+    background: rgb(240, 240, 240);
+    border: 1px solid;
+    border-color: rgb(231, 231, 231);
+    color: rgb(53, 53, 53);
+}
+
+.btnBusquedaGoogle:hover {
+    border: 2px solid;
+    border-color: rgb(216, 216, 216);
+    border-radius: 5px;
+}
+
+.btnTengoSuerte:hover {
+    border: 2px solid;
+    border-color: rgb(216, 216, 216);
+    border-radius: 5px;
+}
+
+.img {
+    margin-left: 125px;
+}
+
+.contenedor {
+    margin-left: 410px;
+    margin-top: 130px;
+}
+
+.enlaces {
+    text-decoration: none;
+    margin-left: 1090px;
+    color: black;
+}
+
+.enlaces1 {
+    text-decoration: none;
+    margin-left: 10px;
+    color: black;
+}
+
+.googleImagenes {
+    margin-left: 338px;
+    color: rgb(94, 94, 255);
+    font-size: 20px;
+}
+
+h3 {
+    color: rgb(214, 6, 47);
+}
+
+
+/*Estilos para la busqueda avanzada */
+
+.busquedaAvanzada {
+    width: 41%;
+    height: 26px;
+    display: block;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-color: rgb(224, 224, 224);
+    outline: none;
+}
+
+.busquedaAvanzada:focus {
+    border: 1px solid;
+    border-color: rgb(79, 105, 255);
+}
+
+.contenedorAvan {
+    display: flex;
+}
+
+.titulosEntradas {
+    width: 200px;
+}
+
+.btnBusquedaAvanzada {
+    margin-top: 36px;
+    margin-left: 636px;
+    width: 153px;
+    height: 34px;
+    background: rgb(69, 82, 255);
+    border: 1px solid;
+    border-color: rgb(231, 231, 231);
+    color: rgb(255, 255, 255);
+}
+
+.btnBusquedaAvanzada:hover {
+    background: rgb(43, 57, 255);
+}
+
+.principal {
+    margin-left: 50px;
+}

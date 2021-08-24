@@ -1,0 +1,31 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+{% block seguimiento %}
+
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'seguimiento' 0 user.id  %}">Whatchlist</a>
+</li>
+
+{% endblock%}
+
+{% block body %}
+
+
+
+
+    <form class = "titulo" action="{% url 'agregarS' user.id %}" method="post" enctype= multipart/form-data> 
+        {% csrf_token %}
+        {{form}}
+        <input type="file" name="imagenSub", id="imagenSub" >
+
+     <input class = "formAddSubasta"  type="submit" value="Create">
+    
+    </form>
+
+
+
+
+
+
+{% endblock %}

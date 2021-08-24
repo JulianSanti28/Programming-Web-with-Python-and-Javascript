@@ -1,0 +1,188 @@
+{% extends "auctions/layout.html" %}
+{% load static %}
+
+
+<!--Subastas-->
+
+
+
+{% block seguimiento %}
+
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'seguimiento' 0 user.id  %}">Whatchlist: {{cont}}</a>
+</li>
+
+{% endblock%}
+
+
+
+{% block body %}
+
+
+
+{% if confirmacion %}
+
+<div class="confirmacion">
+
+    <p class="tituloConfirmacion">{{confirmacion}}</p>
+
+</div>
+
+<br>
+
+{% endif %}
+
+
+
+{% if error %}
+
+<div class="error">
+
+    <p class="tituloError">{{error}}</p>
+
+</div>
+
+<br>
+
+{% endif %}
+
+
+<ul>
+
+    <div>
+
+        <li class="tituloCont">
+
+            <div class="contenedorDiv">
+
+                <div>
+
+                    <img src="{{sub.imagen.url}}" alt="">
+                    
+                </div>
+
+                <h4 class="titulo"> Subasta: {{sub.titulo}}</h4>
+                <h6>Description: {{sub.descripcion}}</h6>
+                <h6>Category: {{sub.categoria}}</h6>
+                <h6>Initial offer: $ {{sub.precioInicial}} </h6>
+                <h6>Best current offer: $ {{mejorOferta}} </h6>
+                
+
+
+                {% if user.is_authenticated %}
+
+                <!---Formulario para hacer una oferta-->
+                <br>
+                <form class="formulario" action="{% url 'agregarO' sub.id user.id %}" method="POST">
+                    {% csrf_token %}
+                    <input class="entrada" type="text" name="offer"placeholder="What is your offer?" required>
+                    <br>
+                    <input class="boton" type="submit" value="Ofertar">
+                </form>
+
+                <br>
+                <form action="{% url 'seguimiento' sub.id user.id %}" method="post">
+                    {% csrf_token %}
+                    <input class="boton" type="submit" value="Add Whatchlist">
+                </form>
+
+                <br>
+
+                {% if user.id == usuario%}
+
+                <div class="miSubasta">
+
+                   <p class="titulomiSubasta">This auction is created by you!</p>
+
+                    <form action="{% url 'cerrarS' sub.id %}" method="post">
+                        {% csrf_token %}
+                        <input class="boton" type="submit" value="Close auction?">
+                    </form>
+
+                    
+
+
+                </div>
+
+
+
+
+
+                {% endif %}
+
+
+
+
+
+
+            </div>
+
+
+
+            <br>
+            <br>
+            <br>
+
+
+
+            <div class="comentariosCont">
+
+                <!---Lista de comentarios-->
+
+
+                <h5 class="tituloComent">Comments:</h5>
+
+                {% for comment in comentarios %}
+
+                <ul>
+                    <li class="item">
+                        <h6>User: {{comment.usuario}}</h6>
+                        <h6>Description: {{comment.descripcion}}</h6>
+                        <h6>Date: {{comment.fecha}}</h6>
+                    </li>
+
+                </ul>
+                {% endfor %}
+                <br>
+
+
+
+                <!--Espacio para agregar comentarios a ésta subasta-->
+
+
+                <form class="formComent" action="{% url 'agregarC' sub.id user.id %}"method="post">
+                    {% csrf_token %}
+                    <input class="entrada" type="text" name="descripcion"
+                        placeholder="Comment" required>
+                    <input class="boton" type="submit">
+                </form>
+
+                <br>
+                <br>
+
+
+
+
+
+
+            </div>
+
+
+            {% else %}
+
+            <h6 style="color:#fd1f1f">Login to see more</h6>
+
+            {% endif %}
+
+
+
+        </li>
+
+
+    </div>
+
+
+
+</ul>
+
+{% endblock %}

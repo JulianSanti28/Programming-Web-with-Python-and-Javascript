@@ -1,0 +1,274 @@
+
+
+body{
+
+    background: rgb(0, 0, 0);
+}
+.container{
+
+    
+    background: rgb(236, 236, 236);
+   
+}
+
+.titulo{
+  color: rgb(255, 255, 255);
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+
+.tituloCont{
+   
+ list-style-position: outside ;
+ list-style-type: disc;
+ color: white;
+ 
+}
+
+.formulario{
+
+    color: white;
+    display: flex;
+}
+
+.formAddSubasta{
+
+    display: block;
+    margin-left: 1060px;
+   
+    margin-top: 35px;
+    width:130px;
+    height:30px;
+    background: #3a3a3a;
+	border:1px;
+    border-color: rgb(20, 20, 20);
+	padding: 5px;
+	color: rgb(255, 255, 255);
+    border-radius: 7px;
+  
+}
+
+.formAddSubasta:hover{
+
+    background: #525252;
+    border:1px solid rgb(126, 126, 126);
+    border-radius: 16px;
+    
+    
+}
+
+.boton{
+
+    margin-left: 5px;
+    width:130px;
+    height:30px;
+    background: #3a3a3a;
+	border:1px;
+    border-color: rgb(20, 20, 20);
+	padding: 5px;
+	color: rgb(255, 255, 255);
+    border-radius: 7px;
+	
+
+}
+
+.boton:hover{
+
+    background: #525252;
+    border:1px solid rgb(126, 126, 126);
+    border-radius: 16px;
+    
+    
+}
+
+.entrada{
+
+    margin-left: 2px;
+    width:165px;
+    height:30px;
+    border-radius: 12px;
+    
+    
+}
+
+
+.entrada:focus{
+
+    outline: none;
+}
+
+.comentariosCont{
+
+ 
+        background:rgb(0, 0, 0);
+        list-style-position: outside ;
+        list-style-type: disc;
+        color: white;
+        float: left;
+        width: 350px;
+    }
+
+
+.tituloComent{
+
+    text-align: center
+}
+
+.item{
+    background: rgb(20, 20, 20);
+    border-radius:9px;
+    margin-top: 12px;
+    width: 275px;
+    height: 95px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+  
+}
+
+.tituloSubasta{
+    
+    color:rgb(180, 180, 180);
+   
+    border-radius: 5px;
+    
+
+
+}
+
+.tituloSubasta:hover{
+    
+    text-decoration:none;
+    color:rgb(180, 180, 180);
+    font-size: 17px;
+    
+    
+}
+
+.subasta{
+
+
+    background: rgb(0, 0, 0);
+    margin-top: 12px;
+    width: 220px;
+    height: 150px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+
+}
+
+.formComent{
+
+    margin-left: 25px;
+        
+}
+
+.confirmacion{
+
+    width:320px;
+    height:32px;
+    background:rgb(172, 255, 172);
+    margin-left:38px;
+    border-radius:8px;
+
+
+}
+
+.tituloConfirmacion{
+
+    color:black;
+    text-align:center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:4px;
+}
+
+.tituloConfirmacionSeg{
+
+    color:rgb(255, 255, 255);
+    text-align:center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:4px;
+}
+
+.miSubasta{
+
+    width:320px;
+    height:32px;
+    background:rgb(223, 255, 106);
+    margin-left:5px;
+    border-radius:8px;
+
+
+}
+
+.titulomiSubasta{
+
+    color:black;
+    text-align:center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:4px;
+}
+
+
+
+.error{
+
+    width:320px;
+    height:32px;
+    background:rgb(255, 97, 97);
+    margin-left:38px;
+    border-radius:8px;
+
+
+}
+
+.tituloError{
+
+    text-align:center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top:4px;
+}
+
+.confirmacionNot{
+
+
+    width:320px;
+    height:90px;
+    background:rgb(172, 255, 172);
+    margin-left:38px;
+    border-radius:8px;
+
+
+}
+
+.botonError{
+
+    background:rgb(255, 73, 73);
+    border-radius:8px;
+    border-color: rgb(255, 48, 48);
+    margin-left:240px;
+    color:black;
+    
+}
+
+.botonError:hover{
+
+    background:rgb(255, 50, 50);
+    border-radius:8px;
+    border-color: rgb(255, 48, 48);
+    margin-left:240px;
+    color:black;
+    
+}
+
+
+
+.confirmacionSeg{
+
+
+    width:320px;
+    height:90px;
+    background:rgb(37, 37, 37);
+    margin-left:38px;
+    border-radius:8px;
+
+}
