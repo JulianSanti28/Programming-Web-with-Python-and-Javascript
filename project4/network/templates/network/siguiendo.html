@@ -1,0 +1,61 @@
+{% extends "network/layout.html" %}
+{% load static %}
+
+{% block script%}
+
+<script src="{% static 'network/network.js' %}"></script>
+
+{% endblock %}
+
+
+{% block body %}
+
+
+<ul class="contenedorPub">
+
+    {% for pub in page_obj %}
+
+    <li class="publicacion"><a id="Profile" class="tituloPub" href="{% url 'view_profile' pub.usuario.id %}">By:
+            {{pub.usuario}}</a>
+        <h6 class="titulo" id="desc {{pub.id}}">{{pub.descripcion}}</h6>
+        <h6 class="titulo">Date: {{pub.fecha}} </h6>
+        <input class="check" type="checkbox" id="Likes {{pub.id}}">
+        <label data-check="Likes {{pub.id}}" class="like" for="Likes {{pub.id}}" id={{pub.id}}>♡ {{pub.likes}}</label>
+
+        {% if pub.usuario.id == user.id and user.is_authenticated%}
+        <textarea class="txt_edit" name="" id="text edit {{pub.id}}" placeholder="Edit post"> </textarea>
+        <h5 class="titulo" id="edit {{pub.id}}">Edit</h5>
+        {% endif %}
+    </li>
+
+    {% endfor %}
+
+
+</ul>
+
+<div class="pagination">
+    <span class="step-links">
+        {% if page_obj.has_previous %}
+        <a href="?page=1">&laquo; first</a>
+        <a href="?page={{ page_obj.previous_page_number }}">previous</a>
+        {% endif %}
+
+        <span class="current">
+            Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}.
+        </span>
+
+        {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">next</a>
+        <a href="?page={{ page_obj.paginator.num_pages }}">last &raquo;</a>
+        {% endif %}
+    </span>
+</div>
+
+
+
+
+
+
+
+
+{% endblock %}

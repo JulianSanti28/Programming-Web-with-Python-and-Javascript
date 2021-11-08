@@ -1,0 +1,253 @@
+
+
+body{
+
+    background: rgb(0, 0, 0);
+}
+
+
+.tituloPub{
+    
+    color:rgb(180, 180, 180);
+   
+    border-radius: 5px;
+    
+
+
+}
+
+.tituloPub:hover{
+    
+    text-decoration:none;
+    color:rgb(180, 180, 180);
+    font-size: 17px;
+    
+    
+}
+
+@keyframes movePuText {
+
+    from{
+
+        font-size: 0px;
+     
+    }to{
+
+        font-size: 17px;
+      
+    }
+    
+}
+
+
+.titulo{
+     
+       color: rgb(255, 255, 255);
+       font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         /*Animacion*/
+        font-size: 17px;
+        position: relative;
+        animation-name: movePuText;
+        animation-duration: 1.5s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+        cursor: pointer;
+    
+  }
+
+
+
+.contenedorPub{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+@keyframes movePu {
+
+    from{
+
+        width: 0px;
+        height: 0px;
+     
+    }to{
+
+        width: 1080px;
+        height: 180px;
+      
+    }
+    
+}
+
+
+.publicacion{
+  
+
+      /*Animacion*/
+
+      position: relative;
+      animation-name: movePu;
+      animation-duration: 1.5s;
+      animation-iteration-count: 1;
+      animation-fill-mode: forwards;
+  
+
+    text-align: center;
+    background: rgb(54, 54, 54);
+    border: rgb(123, 251, 255) solid 2px;
+    border-radius: 4px;
+    margin-top: 30px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+
+}
+
+
+.publicacionNew{
+  
+    margin-left: 310px;
+   
+    text-align: center;
+    background: rgb(54, 54, 54);
+    border: rgb(95, 255, 255) solid 2px;
+    border-radius: 4px;
+    margin-top: 30px;
+    width: 720px;
+    height: 90px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+
+}
+
+.boton{
+
+    margin-left: 620px;
+    width:110px;
+    height:30px;
+    background: #3a3a3a;
+	border:1px;
+    border-color: rgb(20, 20, 20);
+	padding: 5px;
+	color: rgb(255, 255, 255);
+    border-radius: 7px;
+    margin-top: 20px;
+	
+
+}
+
+.boton:hover{
+
+    background: #525252;
+    border:1px solid rgb(126, 126, 126);
+    border-radius: 16px;
+    
+    
+}
+
+
+.like{
+
+    color: rgb(255, 255, 255);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      /*Animacion*/
+     font-size: 17px;
+     position: relative;
+     font-size: 22px;
+     cursor: pointer;
+ 
+
+}
+
+
+.check{
+
+  display: none;
+
+   
+}
+
+img{
+
+    width: 230px;
+    height: 230px;
+    border-radius: 150px;
+    margin-top: 15px;
+    margin-left: 560px;
+}
+
+.infoPerfil{
+
+    color: aliceblue;
+    margin-left: 4px;
+    text-align: center;
+
+
+}
+
+#Follow{
+
+ 
+    display: none;
+}
+
+.contenedor-entrada{
+    margin-left: 650px;
+	position: relative;
+	margin-bottom: 30px;
+	padding:5px 0 5px 60px;
+	display: block;
+}
+
+.contenedor-entrada input + i{
+    background: #ffffff;
+    border:2px solid rgba(0,0,0,0.2);
+    position: absolute; 
+    left: 0;
+    top: 0;
+}
+
+.contenedor-entrada input[type=checkbox ] + i{
+	width: 53px;
+	height: 28px;
+	border-radius: 15px;
+}
+
+.contenedor-entrada input[type=checkbox] + i:before{
+	content: ''; 
+	width: 26px;
+	height: 26px;
+	background: #fff;
+	border-radius: 70%;
+	position: absolute;
+	z-index: 1;
+	left: 0px;
+	top: 0px;
+	-webkit-box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+	box-shadow: 3px 0 3px 0 rgba(0,0,0,0.2);
+}
+
+.contenedor-entrada input[type=checkbox]:checked + i:before{
+	left: 22px;
+	-webkit-box-shadow: -3px 0 3px 0 rgba(0,0,0,0.2);
+	box-shadow: 3px 0 -3px 0 rgba(0,0,0,0.2);
+}
+ 
+.contenedor-entrada input[type=checkbox]:checked + i{
+ background: #00eeff;
+}
+
+
+.edit{
+
+    margin-left: 15px;
+}
+
+.txt_edit{
+
+    display: none;
+    margin-left: 36%;
+    border: #007981 solid 2px;
+    border-radius: 15px;
+}
+
